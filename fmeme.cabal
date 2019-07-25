@@ -1,0 +1,61 @@
+name: fmeme
+version: 0.0.0.1
+synopsis: See readme.md
+description: See readme.md for description.
+cabal-version: 2.0
+category: project
+author: Tony Day
+maintainer: tonyday567@gmail.com
+copyright: Tony Day (c) 2017
+license: BSD3
+homepage: https://github.com/tonyday567/fmeme#readme
+bug-reports: https://github.com/tonyday567/fmeme/issues
+build-type: Simple
+extra-source-files:
+  readme.md
+source-repository head
+  type: git
+  location: https://github.com/tonyday567/fmeme
+
+executable fmeme
+  main-is: example.lhs
+  hs-source-dirs: app
+  default-extensions:
+    NegativeLiterals
+    NoImplicitPrelude
+    OverloadedStrings
+    UnicodeSyntax
+  ghc-options:
+    -funbox-strict-fields
+    -fforce-recomp
+    -threaded
+    -rtsopts
+    -with-rtsopts=-N
+  build-depends:
+      base >= 4.7 && < 5
+    , doctest ^>= 0.16.0.1
+    , protolude ^>= 0.2.3
+    , readme-lhs ^>= 0.2.0
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: test.hs
+  hs-source-dirs: test
+  default-extensions:
+    NegativeLiterals
+    NoImplicitPrelude
+    OverloadedStrings
+    UnicodeSyntax
+  ghc-options:
+      -funbox-strict-fields
+      -fforce-recomp
+      -threaded
+      -rtsopts
+      -with-rtsopts=-N
+  build-depends:
+      base >= 4.7 && < 5
+    , doctest ^>= 0.16.0.1
+    , protolude ^>= 0.2.3
+    , readme-lhs ^>= 0.2.0
+  default-language: Haskell2010
