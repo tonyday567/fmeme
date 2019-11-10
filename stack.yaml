@@ -1,7 +1,25 @@
-resolver: lts-13.29
+resolver: lts-14.13
 
 packages:
   - .
+  - ../moo
+  - ../online/online
+  - ../chart-svg
+  - ../numhask-space
+  - ../readme-lhs
+  - ../pmlb
 
 extra-deps:
-  - readme-lhs-0.2.0
+  - pipes-text-0.0.2.5
+  - streaming-utils-0.2.0.0
+  - json-stream-0.4.2.4
+  - box-0.0.1.5
+  - discrimination-0.4
+  - gray-code-0.3.1
+  - hw-dsv-0.3.5
+  - hw-simd-0.1.1.0
+  - javascript-bridge-0.2.0
+  - lucid-svg-0.7.1
+  # - readme-lhs-0.2.0
+  - web-rep-0.1.2
+

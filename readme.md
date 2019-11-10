@@ -7,11 +7,34 @@ functional memetics
 
 -   [thesis](http://etheses.whiterose.ac.uk/4847/1/Richard%20Senington%27s%20thesis.pdf)
 
--   [kmett search](https://hackage.haskell.org/package/search-0.2)
+http://hackage.haskell.org/package/local-search-0.0.7/docs/Control-Search-Local-Example.html
 
 -   [moo](https://github.com/astanin/moo)
+
+MNIST & RNN
+===
+
+learning to learn
+---
+
+https://becominghuman.ai/paper-repro-learning-to-learn-by-gradient-descent-by-gradient-descent-6e504cc1c0de
+https://github.com/deepmind/learning-to-learn
+https://arxiv.org/pdf/1606.04474v2.pdf
+
+
+
+
+Workflow
+===
 
 
 ```
 stack build --test --exec "$(stack path --local-install-root)/bin/fmeme" --file-watch
 ```
+
+todo
+===
+
+- a simple search of an n-sphere should spread evenly over the surface.
+- search for broad, flat tabletops (aka shared fitness)
+

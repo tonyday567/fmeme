@@ -17,8 +17,31 @@ source-repository head
   type: git
   location: https://github.com/tonyday567/fmeme
 
-executable fmeme
-  main-is: example.lhs
+library
+  hs-source-dirs:
+    src
+  default-extensions:
+    NegativeLiterals
+    OverloadedStrings
+    UnicodeSyntax
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+  build-depends:
+    base >=4.7 && <5
+    , vector
+    , foldl
+  exposed-modules:
+    FMeme.Funks
+    FMeme.Types
+  other-modules:
+  default-language: Haskell2010
+
+executable fmeme-chart
+  main-is: fmeme-chart.hs
   hs-source-dirs: app
   default-extensions:
     NegativeLiterals
@@ -33,10 +56,31 @@ executable fmeme
     -with-rtsopts=-N
   build-depends:
       base >= 4.7 && < 5
-    , doctest ^>= 0.16.0.1
-    , protolude ^>= 0.2.3
+    , attoparsec
+    , backprop
+    , bifunctors
+    , chart-svg
+    , fmeme
+    , foldl
+    , javascript-bridge
+    , lens
+    , lucid >= 2.9
+    , moo
+    , numhask-space
+    , online
     , readme-lhs ^>= 0.2.0
+    , scientific
+    , scotty
+    , sv
+    , text
+    , unordered-containers
+    , vector
+    , wai-middleware-static >= 0.8
+    , web-rep
+    , protolude ^>= 0.2.3
+
   default-language: Haskell2010
+
 
 test-suite test
   type: exitcode-stdio-1.0
@@ -59,3 +103,38 @@ test-suite test
     , protolude ^>= 0.2.3
     , readme-lhs ^>= 0.2.0
   default-language: Haskell2010
+
+executable mnist-example
+  main-is:
+    mnist.lhs
+  hs-source-dirs:
+    app
+  default-extensions:
+    NegativeLiterals
+    OverloadedStrings
+    UnicodeSyntax
+  ghc-options:
+    -funbox-strict-fields -fforce-recomp -threaded -rtsopts -with-rtsopts=-N
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+  build-depends:
+      backprop
+    , base >=4.7 && <5
+    , deepseq
+    , hmatrix >=0.18
+    , microlens
+    , microlens-th
+    , mnist-idx
+    , mwc-random
+    , one-liner-instances
+    , split
+    , time
+    , transformers
+    , vector
+    , readme-lhs ^>= 0.2.0
+  default-language: Haskell2010
+
+
