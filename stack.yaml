@@ -20,6 +20,5 @@ extra-deps:
   - hw-simd-0.1.1.0
   - javascript-bridge-0.2.0
   - lucid-svg-0.7.1
-  # - readme-lhs-0.2.0
   - web-rep-0.1.2
 

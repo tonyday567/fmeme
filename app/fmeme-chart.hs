@@ -27,16 +27,13 @@ import Data.Biapplicative
 import Data.Scientific
 import Data.Sv
 import qualified Data.Sv.Decode as D
--- import Formatting
 import Lucid hiding (b_)
-import Lucid.Base
 import Network.JavaScript
 import Network.Wai.Middleware.Static ((>->), addBase, noDots, staticPolicy)
-import NumHask.Space
 import Numeric.Backprop
 import Protolude hiding ((<<*>>), Meta, Rep, replace)
 import System.IO.Unsafe (unsafePerformIO)
-import Web.Page hiding (foldl')
+import Web.Page
 import Web.Scotty
 import qualified Data.Text as Text
 
